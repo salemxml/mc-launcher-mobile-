@@ -4,3 +4,26 @@ channel = "stable-25_05"
 [agent]
 expertMode = true
 stack = "BEST_EFFORT_FALLBACK"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Build Release APK"
+
+[[workflows.workflow]]
+name = "Build Release APK"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./gradlew assembleRelease"
+
+[workflows.workflow.metadata]
+outputType = "console"
