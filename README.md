@@ -161,5 +161,3 @@ val DarkBackground = Color(0xFF1E1E1E)
 **ملاحظة:** هذا المشروع مستقل وغير مرتبط رسميًا بـ Minecraft أو Mojang Studios.
 
 **الإصدار:** 1.0.0 ✨
-
-<!-- build trigger -->
